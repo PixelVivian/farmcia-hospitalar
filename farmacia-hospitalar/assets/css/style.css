@@ -1,0 +1,131 @@
+/* assets/css/style.css
+   Estilo geral do projeto - usado pelo index.html (porta de entrada estática)
+   Mantém a mesma identidade visual do login.css, mas serve como base
+   para outras páginas estáticas que você queira criar depois.
+*/
+
+:root {
+    --cor-primaria: #2563eb;
+    --cor-primaria-escura: #1d4ed8;
+    --cor-fundo: #eef2f5;
+    --cor-texto-titulo: #1c3d5a;
+    --cor-texto-subtitulo: #6b7280;
+    --cor-borda: #d1d5db;
+    --cor-erro-fundo: #fee2e2;
+    --cor-erro-texto: #b91c1c;
+    --radius-padrao: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: #ffffff;
+    width: 360px;
+    padding: 40px 32px;
+    border-radius: var(--radius-padrao);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.login-container .logo {
+    display: block;
+    margin: 0 auto 16px;
+    max-width: 64px;
+}
+
+.login-container h1 {
+    font-size: 22px;
+    color: var(--cor-texto-titulo);
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.login-container p.subtitulo {
+    font-size: 13px;
+    color: var(--cor-texto-subtitulo);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+.campo small.erro-campo {
+    display: none;
+    color: var(--cor-erro-texto);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.btn-entrar {
+    width: 100%;
+    padding: 11px;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-entrar:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+.btn-entrar:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+}
+
+.mensagem-erro {
+    background-color: var(--cor-erro-fundo);
+    color: var(--cor-erro-texto);
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.rodape-info {
+    text-align: center;
+    font-size: 12px;
+    color: var(--cor-texto-subtitulo);
+    margin-top: 18px;
+}
